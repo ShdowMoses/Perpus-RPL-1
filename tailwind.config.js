@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html"],
+  content: ["./*/*index.html"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        "2xl": "1320px",
+      },
+    },
   },
-  plugins: [],
-}
-
+  plugins: [require("tailwind-hamburgers")],
+};
